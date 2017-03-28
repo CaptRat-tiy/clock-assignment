@@ -8,6 +8,14 @@ h1{
   font-size: 74px;
   letter-spacing: 10px;
 }
+h2{
+  color: #fff;
+  text-align: center;
+  font-size: 32px;
+  letter-spacing: 5px;
+}
+
+
 #del-countdown{
   width: 850px;
   margin: 15% auto;

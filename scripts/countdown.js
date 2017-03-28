@@ -26,10 +26,6 @@ function startTimer(id, deadline){
                     + '<span>' + timer.seconds + '</span>'
 
     var spans = clock.getElementsByTagName("span");
-    animateClock(spans[3]);
-    animateClock(spans[2]);
-    animateClock(spans[1]);
-    animateClock(spans[0]);
 
                     if(timer.total < 1){
                       clearInterval(timerInterval);
