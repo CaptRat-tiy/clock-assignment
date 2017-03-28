@@ -3,16 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- jQuery files for Datepicker script -->
   <title>Deadline Clock W jQuery UI Datepicker - Default functionality</title>
 
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
   <link rel="stylesheet" href="/resources/demos/style.css">
 
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
-  <script src="./scripts/countdown.js"></script>
 
   <!-- FROM INDIAN GUY'S CODE( NEEDED??)
   <script
@@ -24,13 +25,17 @@
   <!-- jQuery Date Picker -->
   <p>Date: <input type="text" id="datepicker"></p>
 
-
-  <div class="clock-border">
-    <span id="days">100</span>
-    <span id="hours">100</span>
-    <span id="minutes">100</span>
-    <span id="seconds">100</span>
+  <div id="del-countdown">
+    <div id="clock"></div>
+    <div id="units">
+      <span>Days</span>
+      <span>Hours</span>
+      <span>Minutes</span>
+      <span>Seconds</span>
+    </div>
   </div>
 
+
+  <script src="./scripts/countdown.js"></script>
 </body>
 </html>
