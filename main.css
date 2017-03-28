@@ -14,6 +14,10 @@ h2{
   font-size: 32px;
   letter-spacing: 5px;
 }
+#datepicker {
+  width: 200px;
+  margin: 50px;
+}
 
 
 #del-countdown{
