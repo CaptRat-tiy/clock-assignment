@@ -1,41 +1,35 @@
-// Datepicker script
+let submitButton =  document.getElementById("submitButton")
 
-$( function() {
-  $( "#datepicker" ).datepicker();
-} );
+submitButton.addEventListener("click", function (){
+  countdown ();
+  });
 
-function updateTimer(deadline){
-  var time = deadline - new Date();
-  return {
-    'days': Math.floor( time/(1000*60*60*24) ),
-    'hours': Math.floor( (time/(1000*60*60)) % 24 ),
-    'minutes': Math.floor( (time/1000/60) % 60 ),
-    'seconds': Math.floor( (time/1000) % 60 ),
-    'total' : time
-  };
+  function countdown() {
+    let now = new Date()
+    let inputYear = document.getElementById("inputYear").value;
+    let inputMonth = +document.getElementById("inputMonth").value - 1;
+    let inputDay = document.getElementById("inputDay").value;
+
+    var customDate = new Date(inputYear, inputMonth, inputDay);
+
+      var currentTime = now.getTime();
+      var eventTime = customDate.getTime();
+      var remTime = eventTime - currentTime;
+
+      var s = Math.floor(remTime / 1000);
+      var m = Math.floor(s / 60);
+      var h = Math.floor(m / 60);
+      var d = Math.floor(h / 24);
+      var y = Math.floor(d / 365)
+
+      h %= 24;
+      m %= 60;
+      s %= 60;
+
+    document.getElementById("days").textContent = d;
+    document.getElementById("hours").textContent = h;
+    document.getElementById("minutes").textContent = m;
+    document.getElementById("seconds").textContent = s;
+
+    setTimeout(countdown, 1000);
 }
-
-function startTimer(id, deadline){
-  var timerInterval = setInterval(function(){
-    var clock = document.getElementById(id);
-    var timer = updateTimer(deadline);
-
-    clock.innerHTML = '<span>' + timer.days + '</span>'
-                    + '<span>' + timer.hours + '</span>'
-                    + '<span>' + timer.minutes + '</span>'
-                    + '<span>' + timer.seconds + '</span>'
-
-    var spans = clock.getElementsByTagName("span");
-
-                    if(timer.total < 1){
-                      clearInterval(timerInterval);
-                      clock.innerHTML = "Time's Up!"
-                    }
-
-  }, 1000);
-}
-
-window.onload = function(){
-  var deadline= new Date("April 25, 2018 17:15:00");
-  startTimer("clock", deadline);
-};

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Christmas Countdown</title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <table class="countdownContainer">
+      <tr class="info">
+        <td colspan="4">Days til Christmas</td>
+      </tr>
+      <tr>
+        <td id="days"></td>
+        <td id="hours"></td>
+        <td id="minutes"></td>
+        <td id="seconds"></td>
+      </tr>
+      <tr>
+        <td>Days slowly pass</td>
+        <td>Hours still</td>
+        <td>Minutes left</td>
+        <td>SECONDS TO GO!</td>
+      </tr>
+    </table>
+    <table>
+      <input id="inputYear" placeholder="Select Year" type="text">
+      <input id="inputMonth" placeholder="Select Month" type="text">
+      <input id="inputDay" placeholder="Select Day" type="text">
+      <button id="submitButton" type="submit" name="button">Start the Clock!</button>
+    </table>
+    <script src="scripts/countdown.js"></script>
+  </body>
+</html>
