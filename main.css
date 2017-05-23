@@ -1,6 +1,5 @@
-
 body {
-  background: yellow;
+  background-image:url("./image/heather-zabriskie-65701.jpg");
 }
 .countdownContainer{
   position: absolute;
@@ -11,7 +10,6 @@ body {
   background: #bbb;
   border: 1px solid red;
   padding: 10px;
-
 }
 .info{
   font-size: 80px;
